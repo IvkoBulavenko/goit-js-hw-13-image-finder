@@ -1,0 +1,16 @@
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 1px #ccc;
+  transition: transform 100ms linear;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.modal {
+  max-height: 100vh;
+}
