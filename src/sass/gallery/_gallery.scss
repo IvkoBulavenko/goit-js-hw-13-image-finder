@@ -1,5 +1,6 @@
 body {
   padding: 30px;
+  background-color: rgb(123, 175, 241);
 }
 img {
   display: block;
@@ -13,7 +14,7 @@ ul {
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 15px;
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -41,7 +42,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(148, 145, 145);
   transition: transform 300ms linear;
   &:hover {
     transform: scale(1.05);
@@ -55,4 +56,11 @@ ul {
 }
 .material-icons {
   margin-right: 5px;
+  color: #6c3eeb;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
