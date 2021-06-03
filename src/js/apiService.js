@@ -16,7 +16,7 @@ const RenderGallery = new Render(gallryRef);
 const FetchImages = new Fetch(URL);
 const observer = new IntersectionObserver(toScroll, observerOptions);
 
-formRef.addEventListener('input', debounce(onInputHandler, 500));
+formRef.addEventListener('submit', onInputHandler);
 gallryRef.addEventListener('click', onImageClick);
 
 let page = 1;
@@ -39,7 +39,8 @@ function renderImages(obj) {
 }
 
 function onInputHandler(e) {
-  query = e.target.value.trim();
+  e.preventDefault();
+  query = e.target.elements.query.value;
   if (!query) {
     PNotify.error(pnotifyOptions);
     e.target.value = '';
